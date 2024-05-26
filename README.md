@@ -31,7 +31,7 @@ sudo apt install ros-humble-moveit-resources-fanuc-description -y
 sudo apt install ros-humble-moveit-resources-fanuc-moveit-config -y
 ```
 
-#For laucnh the movelt2_roarm_em0 project
+## For laucnh the movelt2_roarm_em0 project
 
 ros2 launch movelt2_roarm_em0 demo.launch.py
 
