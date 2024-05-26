@@ -1,5 +1,6 @@
-# RoARm_Robot_Movelt
+# RoARm Robot Movelt
 
+---
 
 ### Introduction to Movel2 and the RoArm-M2-S Robotic Arm
 
@@ -18,4 +19,20 @@ Overall, the RoArm-M2-S robotic arm by Movel2 is a versatile and reliable tool t
 ![RoArm-Movelt](static/img2.png)
 
 
-# ros2 launch movelt2_roarm_em0 demo.launch.py
+## Installation
+
+Follow these steps to set up your environment and clone the repository:
+
+```
+sudo apt install ros-humble-moveit-visual-tools -y
+sudo apt install ros-humble-moveit-setup-assistant -y
+sudo apt install ros-humble-moveit -y
+sudo apt install ros-humble-moveit-resources-fanuc-description -y
+sudo apt install ros-humble-moveit-resources-fanuc-moveit-config -y
+```
+
+#For laucnh the movelt2_roarm_em0 project
+
+ros2 launch movelt2_roarm_em0 demo.launch.py
+
+
