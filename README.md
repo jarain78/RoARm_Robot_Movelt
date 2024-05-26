@@ -36,3 +36,9 @@ sudo apt install ros-humble-moveit-resources-fanuc-moveit-config -y
 ros2 launch movelt2_roarm_em0 demo.launch.py
 
 
+
+[RoArm-M2-S](https://www.youtube.com/watch?v=x3iG262SEW0&lc=UgxfMQB3jESwzyWxrPN4AaABAg.A3rspvJhU13A3uX-SqHTB4)
+
+
+
+
