@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<robot name="physics">
+
+  <material name="gray">
+    <color rgba="0.8 0.8 0.8 1"/>
+  </material>
+ 
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://roarm/meshes/base.stl"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://roarm/meshes/base.stl" />
+      </geometry>
+    </collision>    
+  </link>
+
+  <link name="l1_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://roarm/meshes/L1.stl"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://roarm/meshes/L1.stl" />
+      </geometry>
+    </collision>     
+  </link>
+
+  <link name="l2_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://roarm/meshes/L2.stl"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.03796"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -0.03796"/>
+      <geometry>
+        <mesh filename="package://roarm/meshes/L2.stl" />
+      </geometry>
+    </collision>      
+  </link>
+
+  <link name="l3_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://roarm/meshes/L3.stl"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.03 0 -0.27477"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.03 0 -0.27477"/>
+      <geometry>
+        <mesh filename="package://roarm/meshes/L3.stl" />
+      </geometry>
+    </collision>      
+  </link>
+ 
+  <link name="l4_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://roarm/meshes/L4.stl"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.03 0 -0.49076"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.03 0 -0.49076"/>
+      <geometry>
+        <mesh filename="package://roarm/meshes/L4.stl" />
+      </geometry>
+    </collision>     
+  </link>
+
+  
+  
+  <joint name="base_to_L1" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
+    <parent link="base_link"/>
+    <child link="l1_link"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="L1_to_L2" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-1.570796" upper="1.570796" velocity="0.5"/>
+    <parent link="l1_link"/>
+    <child link="l2_link"/>
+    <origin xyz="0 0 0.03796"/>
+  </joint>
+
+  <joint name="L2_to_L3" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-0.78539815" upper="3.1415926" velocity="0.5"/>
+    <parent link="l2_link"/>
+    <child link="l3_link"/>
+    <origin xyz="0.03 0 0.23682"/>
+  </joint>
+
+  <joint name="L3_to_L4" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="1000.0" lower="-2.3561942" upper="2.3561942" velocity="0.5"/>
+    <parent link="l3_link"/>
+    <child link="l4_link"/>
+    <origin xyz="0 0 0.21599"/>
+  </joint>
+
+</robot>

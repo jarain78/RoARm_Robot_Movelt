@@ -1,0 +1,7 @@
+# Default initial positions for physics's ros2_control fake system
+
+initial_positions:
+  L1_to_L2: 0
+  L2_to_L3: 0
+  L3_to_L4: 0
+  base_to_L1: 0
